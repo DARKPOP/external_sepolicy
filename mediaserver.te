@@ -83,3 +83,6 @@ allow mediaserver mediaserver_service:service_manager add;
 # /oem access
 allow mediaserver oemfs:dir search;
 allow mediaserver oemfs:file r_file_perms;
+
+# Allow ViPER4Android in enforcing mode.
+allow mediaserver mediaserver_tmpfs:file { read write execute };
